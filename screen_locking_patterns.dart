@@ -24,8 +24,9 @@ Object countPatternsFrom(String f, int l) {
       num_combinations += point_possible[f]!.length;
     } else {
       for (var a = 0; a < current_point[i - 1].length; a++) {
-        current_point[i - 1][a];
+        point_possible[current_point[i - 1][a]]!.remove(used_point);
       }
+      print(point_possible);
       used_point.addAll(current_point[i - 1]);
     }
   }
